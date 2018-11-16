@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Person", catalog = "", schema = "PUBLIC")
+@Table(name = "Person", catalog = "DB", schema = "PUBLIC")
 @XmlRootElement
 @NamedQueries({
         @NamedQuery(name = "Person.findAll", query = "SELECT p FROM Person p")
