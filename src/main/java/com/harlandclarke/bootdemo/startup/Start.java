@@ -34,6 +34,7 @@ public class Start implements WebServerFactoryCustomizer<TomcatServletWebServerF
         int defaultport = 8900;
 
         String currentDirectory = System.getProperty("user.dir");
+        int substringStart = (currentDirectory.length() < 6) ? 0 : currentDirectory.length() - 6;
         currentDirectory = currentDirectory.substring(currentDirectory.length() - 6); //SLINGDOC_A or SLINGDOC_B
         System.out.println("Current working directory : " + currentDirectory);
         if (currentDirectory.equals("A_CELL")) {
