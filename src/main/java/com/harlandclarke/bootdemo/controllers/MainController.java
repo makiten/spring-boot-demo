@@ -61,7 +61,7 @@ public class MainController {
     }
 
 
-    @RequestMapping(value = "/", method= RequestMethod.POST)
+    @RequestMapping(value = "", method= RequestMethod.POST)
     public OutboundResponse addNewPerson (@RequestBody Person person) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
@@ -98,7 +98,7 @@ public class MainController {
         return new OutboundResponse("true");
     }
 
-    @RequestMapping(value = "/", method= RequestMethod.GET)
+    @RequestMapping(value = "", method= RequestMethod.GET)
     public Iterable<Person> getAllUsers() {
         // This returns a JSON or XML with the users
         logger.error("Not really an error just testing");
