@@ -31,7 +31,7 @@ public class Start implements WebServerFactoryCustomizer<TomcatServletWebServerF
 
     @Override
     public void customize(TomcatServletWebServerFactory factory) {
-        int defaultport = 8900;
+        int defaultport = 80;
 
         String currentDirectory = System.getProperty("user.dir");
         // currentDirectory = currentDirectory.substring(currentDirectory.length() - 6); //SLINGDOC_A or SLINGDOC_B
