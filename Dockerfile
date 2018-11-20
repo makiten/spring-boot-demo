@@ -1,7 +1,8 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk-alpine as builder
 WORKDIR /app
+RUN apk update && apk upgrade && apk --no-cache add git
 RUN git clone https://github.com/makiten/spring-boot-demo.git .
-RUN ./gradlew build && java -jar build/libs/bootdemo-0.0.1-SNAPSHOT.jar
+RUN ./gradlew build -x test
 
 # To change this license header, choose License Headers in Project Properties.
 # To change this template file, choose Tools | Templates
